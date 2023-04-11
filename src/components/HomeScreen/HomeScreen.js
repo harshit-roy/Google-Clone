@@ -12,7 +12,7 @@ const HomeScreen = () => {
             alt="Google Icon"
             className="mx-auto my-3 mt-5"
           />
-          <div className="formDiv col-md-5 mx-auto my-2 d-flex align-items-center border justify-content-between">
+          <div className="formDiv col-md-5 mx-auto my-2 d-flex align-items-center border border-solid justify-content-between">
             <i className="fa fa-search mx-1 ms-3"></i>
             <form style={{ width: "100%" }} className="mx-2">
               <input
@@ -31,7 +31,7 @@ const HomeScreen = () => {
               <i className="fa fa-microphone"></i>
             </button>
           </div>
-          <div className="btns mx-auto text-center">
+          <div className="btns mx-auto text-center mt-3">
             <button type="button" className="btn btn-default mx-1">Google Search</button>
             <button type="button" className="btn btn-default mx-1">Feeling Lucky</button>
           </div>
