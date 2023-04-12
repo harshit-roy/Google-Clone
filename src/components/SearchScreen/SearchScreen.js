@@ -11,7 +11,7 @@ const SearchScreen = ({searchTerm}) => {
   },[searchTerm]);
   return (
     <div className="Search_screen">
-      <h1>Welcome to Search Screen</h1>
+      <h1>Welcome to Search Screen : {searchTerm}</h1>
     </div>
   );
 };

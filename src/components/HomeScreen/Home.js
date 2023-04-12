@@ -1,11 +1,11 @@
 import React from "react";
 import HomeScreen from "./HomeScreen";
 import Navbar from "./Navbar";
-const Home = () => {
+const Home = ({setSearch}) => {
     return(
         <>
             <Navbar/>
-            <HomeScreen/>
+            <HomeScreen setSearch ={setSearch}/>
         </>
     );
 };
