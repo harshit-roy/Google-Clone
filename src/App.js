@@ -4,23 +4,23 @@ import React, { useState } from "react";
 import "./App.css";
 import Home from "./components/HomeScreen/Home";
 import SearchScreen from "./components/SearchScreen/SearchScreen";
+import {searchData} from './Api/GoogleSearch';
+
 const App = () => {
-  <Route>
-  const Navigate = useNavigate();
-  </Route>
-   
+    const Navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState('');
 
-  const setSearch = (term) => {
+  const setSearch = async (term) => {
     setSearchTerm(term);
-    Navigate('/search');
+    const data = await searchData(term);
+    console.log(data);
   };
 
   return (
     
       <div className="App">
         <Routes>
-          <Route path="/" element={<Home searchTerm={searchTerm}/>} />
+          <Route path="/" element={<Home setSearch={setSearch}/>} />
           <Route
             path="/search"
             element={<SearchScreen searchTerm={searchTerm} />}
