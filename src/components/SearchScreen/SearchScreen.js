@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import {useNavigate} from 'react-router-dom'
-const SearchScreen = ({searchTerm}) => {
+const SearchScreen = ({searchTerm,googleData}) => {
   const navigate = useNavigate();
-  console.log(navigate)
+  console.log(googleData);
 
   useEffect(() => {
     if(searchTerm === ''){

@@ -8,6 +8,14 @@ const HomeScreen = ({setSearch}) => {
       setSearch(input)
     }
   }
+  const handleButton =() => {
+    if(/^[a-zA-z0-9].*/.test(input) || /^[a-zA-z0-9]+" ".*/.test(input)){
+      setSearch(input)
+    }
+  }
+  const clearInput =() => {
+    setInput('');
+  }
   return (
     <div className="container">
       <div className="row mt-5">
@@ -31,13 +39,13 @@ const HomeScreen = ({setSearch}) => {
                 }}
               />
             </form>
-            {input ? <i className="fa fa-times mx-1"></i> : null}
+            {input ? <i className="fa fa-times mx-1" style={{cursor:"pointer"}} onClick={clearInput}></i> : null}
             <button type="button" className="btn mx-1">
               <i className="fa fa-microphone"></i>
             </button>
           </div>
           <div className="btns mx-auto text-center mt-3">
-            <button type="button" className="btn btn-default border mx-1">Google Search</button>
+            <button type="button" className="btn btn-default border mx-1" onClick={handleButton}>Google Search</button>
             <button type="button" className="btn btn-default border mx-1">Feeling Lucky</button>
           </div>
         </div>

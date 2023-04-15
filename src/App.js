@@ -9,11 +9,12 @@ import {searchData} from './Api/GoogleSearch';
 const App = () => {
     const Navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState('');
-
+  const [googleData,setGoogleData] = useState({});
   const setSearch = async (term) => {
     setSearchTerm(term);
     const data = await searchData(term);
-    console.log(data);
+    setGoogleData(data);
+    Navigate('/search');
   };
 
   return (
