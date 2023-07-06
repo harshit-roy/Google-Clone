@@ -46,7 +46,7 @@ const HomeScreen = ({setSearch}) => {
           </div>
           <div className="btns mx-auto text-center mt-3">
             <button type="button" className="btn btn-default border mx-1" onClick={handleButton}>Google Search</button>
-            <button type="button" className="btn btn-default border mx-1">Feeling Lucky</button>
+            <button type="button" className="btn btn-default border mx-1">Feeling Lucky!</button>
           </div>
         </div>
       </div>
