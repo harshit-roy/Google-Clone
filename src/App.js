@@ -24,7 +24,9 @@ const App = () => {
           <Route path="/" element={<Home setSearch={setSearch}/>} />
           <Route
             path="/search"
-            element={<SearchScreen searchTerm={searchTerm} />}
+            element={<SearchScreen searchTerm={searchTerm} 
+            googleData={googleData}
+            />}
           />
         </Routes>
       </div>
