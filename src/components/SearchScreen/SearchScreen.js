@@ -16,7 +16,7 @@ const SearchScreen = ({ searchTerm, googleData }) => {
     <div className="container">
       <div className="row">
         <div className="col-md-12">
-        <h1>Welcome to Search Screen : {searchTerm}</h1>
+        <h1>Welcome to Google Search Screen : {searchTerm}</h1>
         </div>
       </div>
     </div>
