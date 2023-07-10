@@ -12,7 +12,7 @@ const SearchScreen = ({ searchTerm, googleData }) => {
   }, [searchTerm]);
   return (
     <>
-    <Header/>
+    <Header searchTerm={searchTerm}/>
     <div className="container">
       <div className="row">
         <div className="col-md-12">
