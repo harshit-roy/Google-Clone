@@ -1,27 +1,48 @@
-import React,{useState,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-
-const SearchHeader = ({searchTerm}) => {
-  const [searchText,setSearchText] = useState('');
+const SearchHeader = ({ searchTerm }) => {
+  const [searchText, setSearchText] = useState("");
   useEffect(() => {
-    setSearchText(searchTerm)
-  },[searchTerm]);
+    setSearchText(searchTerm);
+  }, [searchTerm]);
   return (
     <div className="col-md-12 py-3 d-flex align-items-center">
-      <Link to={"/"} className="mx-4">
-        <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" 
-            alt="Google Logo"
-            height={30}
+      <Link to={"/"} className="ms-5 mx-2">
+        <img
+          src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
+          alt="Google Logo"
+          height={30}
         />
       </Link>
-      <div className="col-md-8 d-flex">
-        <form style={{width:'70%'}}>
-          <input type="text" value={searchText} className="form-control"
-            style={{outline:'none',boxShadow:'none'}}
+      <div className="col-md-5 d-flex align-items-center justify-content-between border pe-3">
+        <form style={{ width: "87%" }}>
+          <input
+            type="text"
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+            className="form-control border-0 me-2"
+            style={{ outline: "none", boxShadow: "none" }}
           />
         </form>
+        {searchText ? (
+          <i className="fa fa-times" style={{ cursor: "pointer" }}></i>
+        ) : null}
+        <i className="fa fa-microphone" style={{ cursor: "pointer" }}></i>
+        <i className="fa fa-search" style={{ cursor: "pointer" }}></i> 
       </div>
+      <ul className="nav ms-auto me-5">
+        <li className="nav-items">
+          <a href="/" alt="apps" className="nav-link" >
+            <i className="fa fa-th" style={{ color: "black" }}></i>
+          </a>
+        </li>
+        <li className="nav-items">
+          <a href="/" alt="apps" className="nav-link">
+            <i className="fa fa-user " style={{ color: "black" }}></i>
+          </a>
+        </li>
+      </ul>
     </div>
   );
 };

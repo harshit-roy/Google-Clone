@@ -6,7 +6,7 @@ const SearchScreen = ({ searchTerm, googleData }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (searchTerm === " ") {
+    if (searchTerm === " ") {  
       navigate("/");
     }
   }, [searchTerm]);
@@ -15,7 +15,7 @@ const SearchScreen = ({ searchTerm, googleData }) => {
     <Header searchTerm={searchTerm}/>
     <div className="container">
       <div className="row">
-        <div className="col-md-12">
+        <div className="col-md-12 py-5">
         <h1>Welcome to Google Search Screen : {searchTerm}</h1>
         </div>
       </div>
