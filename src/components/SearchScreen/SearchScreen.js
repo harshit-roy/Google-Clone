@@ -4,10 +4,10 @@ import Header from "./Header/Header";
 import SearchData from "./SearchData/SearchData";
 const SearchScreen = ({ searchTerm, googleData }) => {
   const navigate = useNavigate();
-
+  console.log(googleData);
   useEffect(() => {
     if (searchTerm === " ") {  
-      navigate("/");
+      navigate('/');
     }
   }, [searchTerm]);
   return (

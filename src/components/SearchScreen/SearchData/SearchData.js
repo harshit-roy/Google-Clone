@@ -1,15 +1,19 @@
 import React from "react";
- const SearchData = ({googleData}) => {
-    return(
-        <div className="col-md-12 py-5">
-            <p className="small text-dark">
-                All
-                {googleData.searchInformation.formattedTotalResult}
-                result found in
-                {googleData.searchInformation.formattedSearchTime}
-                sec
-            </p>
-        </div>
-    )
- };
- export default SearchData; 
+import Data from "./Data";
+
+const SearchData = ({googleData}) => {
+  return (
+    <div className="col-md-12 py-1">
+      <p className="small text-dark">
+        All {googleData.searchInformation.formattedTotalResults} result found in{" "}
+        {googleData.searchInformation.formattedSearchTime} sec
+      </p>
+      {
+        googleData?.items.map(data => (
+            <Data data={data}/>
+        ))
+      }
+    </div>
+  );
+};
+export default SearchData;
