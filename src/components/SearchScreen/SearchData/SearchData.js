@@ -3,14 +3,14 @@ import Data from "./Data";
 
 const SearchData = ({googleData}) => {
   return (
-    <div className="col-md-12 py-1">
+    <div className="col-md-12 py-2">
       <p className="small text-dark">
         All {googleData.searchInformation.formattedTotalResults} result found in{" "}
         {googleData.searchInformation.formattedSearchTime} sec
       </p>
       {
-        googleData?.items.map(data => (
-            <Data data={data}/>
+        googleData?.items.map((data,id) => (
+            <Data data={data} key={id}/>
         ))
       }
     </div>

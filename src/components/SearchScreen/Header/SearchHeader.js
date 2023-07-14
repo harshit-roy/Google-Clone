@@ -7,16 +7,16 @@ const SearchHeader = ({ searchTerm }) => {
     setSearchText(searchTerm);
   }, [searchTerm]);
   return (
-    <div className="col-md-12 py-3 d-flex align-items-center">
-      <Link to={"/"} className="ms-5 mx-2">
+    <div className="col-md-12 d-flex align-items-center" style={{paddingTop:"1.5%",paddingBottom:".5%"}}>
+      <Link to={"/"} className="ms-5 mx-3">
         <img
           src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
           alt="Google Logo"
           height={30}
         />
       </Link>
-      <div className="col-md-5 d-flex align-items-center justify-content-between border pe-3">
-        <form style={{ width: "87%" }}>
+      <div className="col-md-5 d-flex align-items-center justify-content-between border border-secondary pe-3 rounded">
+        <form style={{ width: "85%" }}>
           <input
             type="text"
             value={searchText}
@@ -26,10 +26,10 @@ const SearchHeader = ({ searchTerm }) => {
           />
         </form>
         {searchText ? (
-          <i className="fa fa-times" style={{ cursor: "pointer" }}></i>
+          <i className="fa fa-times mx-1" style={{ cursor: "pointer" }}></i>
         ) : null}
-        <i className="fa fa-microphone" style={{ cursor: "pointer" }}></i>
-        <i className="fa fa-search" style={{ cursor: "pointer" }}></i> 
+        <i className="fa fa-microphone mx-1" style={{ cursor: "pointer" }}></i>
+        <i className="fa fa-search mx-1" style={{ cursor: "pointer" }}></i> 
       </div>
       <ul className="nav ms-auto me-5">
         <li className="nav-items">
