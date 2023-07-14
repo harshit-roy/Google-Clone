@@ -16,9 +16,9 @@ const SearchSubHeader = () => {
                                 <i className="fa fa-location mx-1"> </i>Maps
                             </Link>
                         </li>
-                        <li className="nav-items">
+                        <li className="nav-items" >
                             <Link to={"/"} className="d-flex align-items-center nav-link justift-content-between text-dark">
-                                <i className="fa fa-play mx-1"> </i>Videos
+                                <i className="fa fa-play mx-1" > </i>Videos
                             </Link>
                         </li>
                         <li className="nav-items">

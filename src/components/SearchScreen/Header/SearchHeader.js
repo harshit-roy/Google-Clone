@@ -28,8 +28,8 @@ const SearchHeader = ({ searchTerm }) => {
         {searchText ? (
           <i className="fa fa-times mx-1" style={{ cursor: "pointer" }}></i>
         ) : null}
-        <i className="fa fa-microphone mx-1" style={{ cursor: "pointer" }}></i>
-        <i className="fa fa-search mx-1" style={{ cursor: "pointer" }}></i> 
+        <i className="fa-solid fa-microphone mx-1" style={{ cursor: "pointer" }}></i>
+        <i className="fa-solid fa-magnifying-glass mx-1" style={{ cursor: "pointer" }}></i> 
       </div>
       <ul className="nav ms-auto me-5">
         <li className="nav-items">
