@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const SearchSubHeader = () => {
     return(
-        <div className="container-fluid  border-bottom border-secondary"> 
+        <div className="container-fluid  border-bottom "> 
                 <div className="col-md-6" style={{marginLeft:'8%'}}>
                     <ul className="nav">
                         <li className="nav-items">
