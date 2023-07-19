@@ -40,7 +40,7 @@ const App = () => {
           />
         ) : null
         }
-        <Route path="/" />
+        <Route path="/"/>
       </Routes>
       
     </div>
