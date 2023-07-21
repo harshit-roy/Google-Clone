@@ -10,13 +10,13 @@ const SearchHeader = ({ searchTerm , setSearch}) => {
   
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (/^[a-zA-z0-9].*/.test(searchTerm) || /^[a-zA-z0-9]+" ".*/.test(searchTerm)) {
-      setSearch(searchTerm);
+    if (/^[a-zA-z0-9].*/.test(searchText) || /^[a-zA-z0-9]+" ".*/.tesxt(searchText)) {
+      setSearch(searchText);
     }
   };
   const handleButton = () => {
-    if (/^[a-zA-z0-9].*/.test(searchTerm) || /^[a-zA-z0-9]+" ".*/.test(searchTerm)) {
-      setSearch(searchTerm);
+    if (/^[a-zA-z0-9].*/.test(searchText) || /^[a-zA-z0-9]+" ".*/.test(searchText)) {
+      setSearch(searchText);
     }
   };
   const clearInput = () => {
@@ -43,7 +43,7 @@ const SearchHeader = ({ searchTerm , setSearch}) => {
           borderTopLeftRadius: "50px",
         }}
       >
-        <form style={{ width: "85%" }}>
+        <form style={{ width: "85%" }} onSubmit={handleSubmit}>
           <input
             type="text"
             value={searchText}
@@ -53,7 +53,7 @@ const SearchHeader = ({ searchTerm , setSearch}) => {
           />
         </form>
         {searchText ? (
-          <i className="fa fa-times mx-1" style={{ cursor: "pointer" }}></i>
+          <i className="fa fa-times mx-1" style={{ cursor: "pointer" }} onClick={clearInput}></i>
         ) : null}
         <i
           className="fa-solid fa-microphone mx-1"
@@ -61,7 +61,7 @@ const SearchHeader = ({ searchTerm , setSearch}) => {
         ></i>
         <i
           className="fa-solid fa-magnifying-glass mx-1"
-          style={{ cursor: "pointer" }}
+          onClick={handleButton} style={{ cursor: "pointer" }}
         ></i>
       </div>
       <ul className="nav ms-auto me-5">
