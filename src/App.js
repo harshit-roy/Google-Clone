@@ -35,7 +35,7 @@ const App = () => {
           (<Route
             path="/search"
             element={
-              <SearchScreen searchTerm={searchTerm} googleData={googleData} />
+              <SearchScreen setSearch={setSearch} searchTerm={searchTerm} googleData={googleData} />
             }
           />
         ) : null

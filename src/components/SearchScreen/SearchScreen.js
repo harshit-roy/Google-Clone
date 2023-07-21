@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "./Header/Header";
 import SearchData from "./SearchData/SearchData";
-const SearchScreen = ({ searchTerm, googleData }) => {
+const SearchScreen = ({ searchTerm, googleData, setSearch }) => {
   const navigate = useNavigate();
   console.log(googleData);
   useEffect(() => {
@@ -12,7 +12,7 @@ const SearchScreen = ({ searchTerm, googleData }) => {
   }, [searchTerm]);
   return (
     <>
-    <Header searchTerm={searchTerm}/>
+    <Header searchTerm={searchTerm} setSearch={setSearch}/>
     <div className="container">
       <div className="row">
         <SearchData googleData={googleData}/>

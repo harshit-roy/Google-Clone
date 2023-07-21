@@ -1,11 +1,27 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-const SearchHeader = ({ searchTerm }) => {
+const SearchHeader = ({ searchTerm , setSearch}) => {
   const [searchText, setSearchText] = useState("");
+  
   useEffect(() => {
     setSearchText(searchTerm);
   }, [searchTerm]);
+  
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (/^[a-zA-z0-9].*/.test(searchTerm) || /^[a-zA-z0-9]+" ".*/.test(searchTerm)) {
+      setSearch(searchTerm);
+    }
+  };
+  const handleButton = () => {
+    if (/^[a-zA-z0-9].*/.test(searchTerm) || /^[a-zA-z0-9]+" ".*/.test(searchTerm)) {
+      setSearch(searchTerm);
+    }
+  };
+  const clearInput = () => {
+    setSearchText("");
+  };
   return (
     <div
       className="col-md-12 d-flex align-items-center"
