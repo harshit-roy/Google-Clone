@@ -41,8 +41,7 @@ const App = () => {
         ) : null
         }
         <Route path="/"/>
-      </Routes>
-      
+      </Routes> 
     </div>
   );
 };
