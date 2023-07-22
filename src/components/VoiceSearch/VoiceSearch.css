@@ -1,0 +1,19 @@
+.voiceModel{
+    position: absolute;
+    z-index: 111111;
+    top:0;
+    left:0;
+    height:100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+.voiceModel .voice-search{
+    height:280px;
+}
+.voiceModel .micIcon{
+position: relative;
+ height: 60px;
+ width: 60px;
+ font-size: 2.5rem;
+ border-radius: 50%;
+ 
+}

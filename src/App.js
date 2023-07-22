@@ -11,6 +11,7 @@ import "./App.css";
 import Home from "./components/HomeScreen/Home";
 import SearchScreen from "./components/SearchScreen/SearchScreen";
 import { searchData } from "./Api/GoogleSearch";
+import VoiceSearch from "./components/VoiceSearch/VoiceSearch";
 
 const App = () => {
   const Navigate = useNavigate();
@@ -25,6 +26,7 @@ const App = () => {
 
   return (
     <div className="App">
+    <VoiceSearch/>
       <Routes>
         <Route 
         exact 
