@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const HomeScreen = ({ setSearch }) => {
+const HomeScreen = ({ setSearch, openVoiceSearch }) => {
   const [input, setInput] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -56,7 +56,8 @@ const HomeScreen = ({ setSearch }) => {
                 onClick={clearInput}
               ></i>
             ) : null}
-            <button type="button" className="btn mx-1">
+            <button type="button" onClick={()=>openVoiceSearch()} 
+            className="btn mx-1">
               <i className="fa fa-microphone"></i>
             </button>
           </div>

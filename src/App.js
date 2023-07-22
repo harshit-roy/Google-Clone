@@ -16,6 +16,7 @@ import VoiceSearch from "./components/VoiceSearch/VoiceSearch";
 const App = () => {
   const Navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState("");
+  const [voiceSearch,setVoiceSearch] = useState(false);
   const [googleData, setGoogleData] = useState({});
   const setSearch = async (term) => {
     setSearchTerm(term);
@@ -23,21 +24,32 @@ const App = () => {
     setGoogleData(data);
     Navigate("/search");
   };
-
+const openVoiceSearch = () => {
+  setVoiceSearch(true);
+}
+const closeVoiceSearch = () => {
+  setVoiceSearch(false);
+}
   return (
     <div className="App">
-    <VoiceSearch/>
+    {
+      voiceSearch?
+      <VoiceSearch closeVoiceSearch={closeVoiceSearch}/>
+      :null
+    }
+    
       <Routes>
         <Route 
         exact 
         path="/" 
-        element={<Home setSearch={setSearch} />} />
+        element={<Home setSearch={setSearch} openVoiceSearch={openVoiceSearch}/>} />
         {
           searchTerm !== "" ? 
           (<Route
             path="/search"
             element={
-              <SearchScreen setSearch={setSearch} searchTerm={searchTerm} googleData={googleData} />
+              <SearchScreen setSearch={setSearch} searchTerm={searchTerm} 
+              googleData={googleData} openVoiceSearch={openVoiceSearch}/>
             }
           />
         ) : null

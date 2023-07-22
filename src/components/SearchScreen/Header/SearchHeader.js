@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-const SearchHeader = ({ searchTerm , setSearch}) => {
+const SearchHeader = ({ searchTerm , setSearch, openVoiceSearch}) => {
   const [searchText, setSearchText] = useState("");
   
   useEffect(() => {
@@ -58,10 +58,12 @@ const SearchHeader = ({ searchTerm , setSearch}) => {
         <i
           className="fa-solid fa-microphone mx-1"
           style={{ cursor: "pointer" }}
+          onClick={()=>openVoiceSearch()}
         ></i>
         <i
           className="fa-solid fa-magnifying-glass mx-1"
-          onClick={handleButton} style={{ cursor: "pointer" }}
+          onClick={handleButton} 
+          style={{ cursor: "pointer" }}
         ></i>
       </div>
       <ul className="nav ms-auto me-5">
